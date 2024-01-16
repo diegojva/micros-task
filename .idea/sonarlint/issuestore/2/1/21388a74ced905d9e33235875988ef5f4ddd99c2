@@ -1,0 +1,13 @@
+
+b	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(ë¼›Ý8Ôô§¡Ñ1
+g	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(»´†êýÿÿÿÿ8Õô§¡Ñ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8äô§¡Ñ1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8äô§¡Ñ1
+_
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄÞ8äô§¡Ñ1
+Ž
+java:S1130D"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(»´†êýÿÿÿÿ8êô§¡Ñ1
+q
+java:S1128"URemove this unused import 'com.nttdata.libreria.apimodel.entity.BookStoreBookEntity'.(“ÓË/8°Û©¡Ñ1

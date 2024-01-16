@@ -1,0 +1,14 @@
+server.port: 8888
+spring.application.name: config-server
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
+
+spring:
+  cloud.config.server.git:
+    #uri: file://D:\documents\diego\micro-config-server
+    uri: https://github.com/diegojva/config-server-task
+    username: diegojva
+    password: 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
+    default-label: master

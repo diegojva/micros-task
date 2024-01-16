@@ -1,0 +1,8 @@
+spring.application.name: author-service
+server.servlet.context-path: /api/v1
+
+spring:
+  profiles:
+    active: dev
+  config:
+    import: configserver:http://localhost:8888

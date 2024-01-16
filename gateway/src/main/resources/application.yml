@@ -1,0 +1,37 @@
+server.port: 8080
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: gateway-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: author-service
+            uri: http://localhost:8001
+            predicates:
+              - Path=/author/**
+              - Before=2024-01-17T02:00:00.000-05:00
+            filters:
+              - PrefixPath=/api/v1
+          - id: book-service
+            uri: http://localhost:8002
+            predicates:
+              - Path=/book/**
+              - After=2024-01-15T02:00:00.000-05:00
+              - Header=X-Custom-Header, custom-value
+            filters:
+              - PrefixPath=/api/v1
+          - id: book-store-service
+            uri: http://localhost:8004
+            predicates:
+              - Path=/book-store/**
+              - Cookie=myCookie, valorCookie
+            filters:
+              - PrefixPath=/api/v1
